@@ -1,0 +1,227 @@
+@import "variables";
+@import "mixins";
+@import "header";
+@import "register";
+@import "signup";
+@import "cart";
+@import "product";
+@import "sub";
+@import "blog";
+@import "footer";
+@import "searchviewwishlist";
+@import "table";
+@import "contact-page";
+@import "track";
+@import "cartwishpage";
+@import "checkout";
+@import "detail";
+@import "slide";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  font-family: $main-font-family;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin-bottom: 0.2em;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  // display: inline-block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+button {
+  background-color: transparent;
+
+  border: none;
+}
+button,
+input,
+select {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+// Utitlity Classes
+.xl-heading {
+  font-size: $xl-heading;
+  font-weight: 900;
+  margin-bottom: 0;
+  color: $primary-color;
+}
+.lg-heading {
+  font-size: $lg-heading;
+  font-weight: 900;
+}
+.md-heading {
+  font-size: $md-heading;
+  font-weight: 600;
+}
+.sm-heading {
+  font-size: $sm-heading;
+  font-weight: 600;
+}
+
+.section-wrapper {
+  padding: 50px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.shop-btn,
+.more-btn {
+  display: inline-block;
+  color: $white;
+  background-color: $primary-color;
+  padding: 15px;
+  font-weight: 600;
+}
+.shop-btn:hover,
+.more-btn:hover {
+  background-color: $secondary-color;
+  color: $white;
+
+  @include transition-ease;
+}
+
+#back_to_top {
+  font-size: 20px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-color;
+  color: $white;
+  @include transition-ease;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+.pagination {
+  justify-content: center;
+
+  li {
+    display: inline-block;
+    border: $border1;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+      color: $white;
+      background-color: $primary-color;
+      border: transparent;
+      box-shadow: $box-shadow-1;
+    }
+  }
+}
+.member {
+  overflow-x: scroll;
+}
+
+.category-btn {
+  text-align: center;
+}
+.fhd{
+  display: unset;
+}
+// containers //
+.container-wrapper {
+  background-color: #edf0f9;
+}
+
+.container {
+  height: 100vh;
+}
+
+.rating-wrapper {
+  align-self: center;
+  box-shadow: 7px 7px 25px rgba(198, 206, 237, 0.7),
+    -7px -7px 35px rgba(255, 255, 255, 0.7),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.9),
+    inset 7px 7px 15px rgba(198, 206, 237, 0.8);
+  border-radius: 5rem;
+  display: inline-flex;
+  direction: rtl !important;
+  padding: 1.5rem 2.5rem;
+  margin-left: auto;
+
+  label {
+    color: #e1e6f6;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 3rem;
+    padding: 1rem 0.6rem;
+    transition: color 0.5s;
+  }
+
+  svg {
+    -webkit-text-fill-color: transparent;
+    -webkit-filter: drop-shadow (4px 1px 6px rgba(198, 206, 237, 1));
+    filter: drop-shadow(5px 1px 3px rgba(198, 206, 237, 1));
+  }
+
+  input {
+    height: 100%;
+    width: 100%;
+  }
+
+  input {
+    display: none;
+  }
+
+  label:hover,
+  label:hover ~ label,
+  input:checked ~ label {
+    color: #34ac9e;
+  }
+
+  label:hover,
+  label:hover ~ label,
+  input:checked ~ label {
+    color: #34ac9e;
+  }
+}

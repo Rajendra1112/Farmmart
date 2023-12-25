@@ -1,0 +1,116 @@
+.header_loog {
+  width: 10%;
+}
+.form-wrapper {
+  border: $border1;
+  padding: 50px;
+  border-radius: 25px;
+  min-width: 50%;
+  max-width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.social-accounts {
+  div {
+    margin-bottom: 30px;
+  }
+}
+.sign_form {
+  button {
+    border: 1px solid #999;
+    border-radius: 25px;
+    font-weight: 600;
+    width: 100%;
+    @include transition-ease;
+    padding: 15px 0;
+  }
+  .apple button {
+    background-color: $white;
+
+    &:hover {
+      background-color: $hover2;
+    }
+  }
+  .google button {
+    background-color: $google;
+
+    &:hover {
+      background-color: $hover1;
+    }
+    i {
+      color: red;
+    }
+    span {
+      color: $white;
+    }
+  }
+
+  .divider {
+    position: relative;
+
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $white;
+    }
+  }
+
+  fieldset {
+    margin-bottom: 30px;
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 10px;
+
+      span {
+        color: red;
+      }
+    }
+    input,
+    select {
+      width: 100%;
+      padding: 15px;
+      border: $border1;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+  }
+
+  .submit-btn {
+    button {
+      background-color: $secondary-color;
+      color: #fff;
+      position: relative;
+      @include transition-ease;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $primary-color;
+        border-radius: 25px;
+        opacity: 0;
+        transform: translateX(-50%);
+        @include transition-ease;
+      }
+
+      &:hover:before {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
+  }
+
+  .agreement {
+    a {
+      color: $primary-color;
+    }
+  }
+}

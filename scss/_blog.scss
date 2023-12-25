@@ -1,0 +1,115 @@
+.blog {
+  .section-title {
+    h1.sm-heading {
+      color: $primary-color;
+      font-weight: 300;
+    }
+  }
+  &_item {
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 15px;
+    @include transition-ease;
+    // overflow: hidden;
+
+    &:hover {
+      box-shadow: $box-shadow-1;
+
+      img {
+        transform: scale(1.01);
+      }
+    }
+  }
+  &_image {
+    overflow: hidden;
+    border-radius: 5px;
+    @include transition-ease;
+    a {
+      display: block;
+    }
+    img {
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      @include transition-ease;
+    }
+  }
+  &_date {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: $primary-color;
+    width: 60px;
+    height: 60px;
+    border-radius: 0 0 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10px;
+      border-left: 10px solid transparent;
+      border-bottom: 10px solid #43aa5c;
+    }
+
+    p {
+      color: $white !important;
+      font-weight: 600;
+    }
+  }
+  &_details {
+    padding: 30px;
+    border: $border1;
+    border-top-color: transparent;
+  }
+  &_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li:not(:last-child):after {
+      content: "/";
+      display: inline-block;
+      padding: 0 15px;
+    }
+    i {
+      color: $icon-color;
+      padding-right: 8px;
+    }
+    p {
+      display: inline-block;
+      color: $ternary-color;
+    }
+  }
+
+  &_detail {
+    h4 {
+      padding: 15px 0;
+      a {
+        color: $secondary-color;
+        font-weight: 600;
+        @include transition-ease;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+    p {
+      color: $ternary-color;
+    }
+  }
+
+  &_btn {
+    margin-top: 15px;
+    a.more-btn {
+      // width: 100%;
+      display: inline-block;
+      border-radius: 5px;
+    }
+  }
+}

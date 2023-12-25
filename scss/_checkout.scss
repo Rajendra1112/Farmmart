@@ -1,0 +1,119 @@
+.checkout {
+  &_form {
+    .billing_form {
+      label,
+      input {
+        display: block;
+        padding: 5px 15px;
+      }
+      input {
+        margin-bottom: 15px;
+        width: 100%;
+        border: $border1;
+
+        &:focus {
+          border: $border2;
+        }
+      }
+    }
+  }
+}
+
+.accordion-box {
+  position: relative;
+
+  .block {
+    position: relative;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 5px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+
+    .acc-btn {
+      position: relative;
+      color: var(--headings-color);
+      font-family: var(--title-font);
+      font-weight: var(--h4-font-weight);
+      font-size: 20px;
+      cursor: pointer;
+      padding: 20px 30px;
+      padding-right: 70px;
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease;
+      border-bottom: 1px solid #fff;
+
+      .icon {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        height: 35px;
+        font-size: 18px;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        line-height: 2;
+        color: var(--theme-color1);
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+      }
+
+      &.active {
+        color: $white;
+        background-color: $primary-color;
+
+        .icon {
+          color: $white;
+
+          &:before {
+            content: "\f068";
+          }
+        }
+      }
+    }
+
+    .acc-content {
+      position: relative;
+      display: none;
+
+      .content {
+        position: relative;
+        padding: 25px 30px;
+
+        .text {
+          display: block;
+          font-size: 16px;
+          line-height: 30px;
+          color: #808287;
+          margin-bottom: 0;
+        }
+      }
+
+      .payment-info {
+        position: relative;
+        display: block;
+        background-color: #fff;
+        padding: 30px;
+      }
+
+      &.current {
+        display: block;
+      }
+    }
+
+    .more-btn {
+      padding: 10px;
+      border-radius: 15px;
+    }
+  }
+}
+
+.payment-method {
+  margin: 50px 0;
+  padding: 30px;
+  box-shadow: $box-shadow-1;
+}

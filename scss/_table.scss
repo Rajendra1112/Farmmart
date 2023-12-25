@@ -1,0 +1,20 @@
+.active_box {
+  width: 65px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: $off-color;
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+
+  &_btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $icon-color;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,32 @@
+.tracker {
+  max-width: 60%;
+  margin: 50px auto;
+  padding: 50px;
+  background-color: $primary-color;
+  color: $white;
+  p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  label {
+    display: block;
+    padding-bottom: 5px;
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+  input {
+    width: 100%;
+    padding: 5px 15px;
+    border: $border2;
+  }
+  .track-btn {
+    display: inline-block;
+    background-color: $secondary-color;
+    color: #fff;
+    margin-top: 30px;
+  }
+}

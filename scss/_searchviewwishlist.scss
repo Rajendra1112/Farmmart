@@ -1,0 +1,251 @@
+/* Search */
+.search-wrapper {
+  position: fixed;
+  top: -10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $section-bg-4;
+  z-index: 2;
+  padding: 100px;
+  visibility: hidden;
+  opacity: 0;
+  @include transition-ease;
+
+  &.active {
+    top: 0%;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .close_search {
+    font-size: 22px;
+    cursor: pointer;
+    color: $white;
+  }
+  .search-bar-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .search-bar {
+      background-color: $white;
+      border-radius: 5px;
+      padding: 15px;
+      width: 60%;
+      text-align: right;
+
+      input {
+        width: 90%;
+        border: none;
+        outline: none;
+      }
+      i {
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* View product */
+.product_view {
+  background-color: $section-bg-4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  transform: translateX(100vw);
+  @include transition-ease;
+
+  &.active {
+    visibility: visible;
+    transform: translateX(0vw);
+  }
+
+  &_box {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    background-color: $white;
+    padding: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    @include transition-ease;
+    transition-delay: 0.3s;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0%);
+    }
+
+    .close_quick_view {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+    .product_detail {
+      span,
+      del {
+        display: block;
+      }
+      span {
+        font-size: 50px;
+        font-weight: 600;
+        color: $primary-color;
+      }
+      del {
+        font-size: 32px;
+        font-weight: 600;
+      }
+    }
+
+    .product_specs {
+      margin: 15px 0;
+
+      .title {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      li:not(:first-child)::before {
+        content: "\2713";
+        display: inline-block;
+        color: $primary-color;
+        margin-right: 8px;
+      }
+    }
+
+    .cart-section {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      margin-bottom: 30px;
+
+      .quantity {
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        border: $border1;
+        margin-right: 15px;
+
+        button,
+        input {
+          width: 33.33%;
+          border: none;
+          padding: 15px;
+          font-size: 20px;
+        }
+      }
+      button:first-child {
+        border-right: $border1;
+      }
+      button:last-child {
+        border-left: $border1;
+      }
+      .cart-btn {
+        width: 55%;
+        .more-btn {
+          width: 100%;
+        }
+      }
+    }
+
+    .wishlist_added {
+      @include transition-ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+/* Added to cart */
+.mini_cart_added,
+.wish_message {
+  background-color: $section-bg-4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(100vw);
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0vw);
+  }
+
+  .message_box,
+  .wish_message_box {
+    width: 40%;
+    background-color: $white;
+    padding: 50px;
+    position: relative;
+
+    .product_image {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .close_modal,
+    .close_wish_msg {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+    p {
+      padding: 15px 0;
+      display: inline-block;
+
+      &::before {
+        content: "\2713";
+        font-size: 12px;
+        color: $white;
+        font-weight: 600;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+    }
+    .modal_btns {
+      .more-btn {
+        display: inline-block;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+/* Added to wishlist */

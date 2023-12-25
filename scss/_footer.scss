@@ -1,0 +1,114 @@
+.footer {
+  background-color: $section-bg-2;
+  color: #fff;
+  text-align: center;
+  padding-top: 50px;
+  h1 {
+    margin-bottom: 15px;
+  }
+  a,
+  span {
+    color: $ternary-color;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+
+    a {
+      background-color: $primary-color;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+
+      &:nth-child(2n) {
+        margin: 0 15px;
+      }
+    }
+  }
+
+  ul {
+    li {
+      line-height: 2;
+    }
+  }
+  .footer1 {
+    p {
+      margin: 15px 0;
+    }
+  }
+  .footer2 {
+    ul {
+      li {
+        a {
+          @include transition-ease;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+  .footer3 {
+    text-align: left;
+    ul {
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        padding-bottom: 15px;
+        line-height: 1.5;
+
+        .icon {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: $white;
+          color: $primary-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 15px;
+        }
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  .footer4 {
+    input {
+      width: 100%;
+      border: $border1;
+      border-radius: 5px;
+      padding: 5px 15px;
+    }
+    .sub-btn {
+      margin-top: 15px;
+      button {
+        width: 100%;
+        background-color: $primary-color;
+        color: $white;
+        font-weight: 600;
+        border-radius: 5px;
+        padding: 5px 15px;
+      }
+    }
+  }
+  .copyright {
+    padding: 30px 0;
+    margin-top: 30px;
+    border-top: $border1;
+
+    span {
+      color: $white;
+    }
+  }
+}

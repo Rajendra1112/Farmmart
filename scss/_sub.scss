@@ -1,0 +1,91 @@
+.package {
+  background-color: $section-bg-1;
+  .section-title {
+    h1.sm-heading {
+      color: $primary-color;
+      font-weight: 300;
+    }
+  }
+  .plan {
+    padding: 30px;
+    margin-bottom: 15px;
+    border: $border1;
+    border-radius: 10px;
+    @include transition-ease;
+
+    &:hover {
+      background-color: $white;
+      border-color: transparent;
+      box-shadow: $box-shadow-1;
+    }
+
+    .price {
+      text-align: center;
+
+      h1.lg-heading {
+        color: $primary-color;
+      }
+      p {
+        color: $ternary-color;
+      }
+    }
+    &_title {
+      padding: 15px 0;
+
+      h1.sm-heading {
+        font-weight: 600;
+      }
+    }
+    ul {
+      li {
+        line-height: 2;
+
+        &::before {
+          content: " \2713";
+          display: inline-block;
+          padding-right: 15px;
+          color: $primary-color;
+        }
+      }
+    }
+
+    .pricing_btn {
+      margin: 15px 0;
+
+      .sub_btn {
+        background-color: $primary-color;
+        color: $white;
+        font-weight: 600;
+        display: inline-block;
+        padding: 15px;
+        border: $border2;
+        border-radius: 5px;
+        text-transform: uppercase;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: $secondary-color;
+          border-radius: 5px;
+          transform: translateX(-50%);
+          visibility: hidden;
+          opacity: 0;
+          @include transition-ease;
+        }
+
+        &:hover {
+          .sub_btn::before {
+            transform: translateX(0%);
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

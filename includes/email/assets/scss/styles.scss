@@ -1,0 +1,134 @@
+$blue_color: #4477f9;
+$slightly_blue: #eef3fd;
+$red_Color: #db4a39;
+$white: #fff;
+
+$border_1: 1px solid #d5d6d6;
+
+$box_Shadow_1: 0px 0px 3px 5px $slightly_blue;
+
+body {
+  background-color: $slightly_blue;
+}
+
+.sm_heading {
+  color: $blue_color;
+  margin-bottom: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+a {
+  transition: all 0.3s ease-in-out;
+  &.change_btn {
+    border: 2px solid $blue_color;
+    display: block;
+    padding: 10px 0;
+    border-radius: 25px;
+    text-align: center;
+
+    &:hover {
+      background-color: $blue_color;
+      color: $white;
+    }
+  }
+}
+
+input {
+  outline: none;
+  background-color: $white;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  border: $border_1;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+
+  &.login_btn {
+    background-color: $blue_color;
+    padding: 10px 0;
+    border-radius: 25px;
+    border: none;
+    color: $white;
+    margin-top: 30px;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      background-color: $red_Color;
+    }
+
+    // &::before {
+    //   content: "";
+    //   display: block;
+    //   width: 50%;
+    //   height: 100%;
+    //   background-color: $red_Color;
+    //   //   position: absolute;
+    //   //   left: 0;
+    //   //   top: 0;
+    //   //   bottom: 0;
+    // }
+  }
+
+  &#remember,
+  &#terms {
+    width: auto;
+    display: inline-block;
+    margin-right: 8px;
+  }
+}
+
+.red {
+  color: $red_Color;
+}
+.page_wrapper {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.white_box {
+  background-color: $white;
+  padding: 50px 30px;
+  width: 35%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: $box_Shadow_1;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    width: 120px;
+    height: 120px;
+    display: block;
+    background-color: $blue_color;
+    border-radius: 50% 0 50% 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    // left: 0;
+    z-index: -1;
+  }
+}
+
+.alert {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .white_box {
+    width: 100%;
+  }
+}

@@ -1,0 +1,67 @@
+.contact {
+  &_method {
+    box-shadow: $box-shadow-1;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-bottom: 30px;
+
+    &_detail {
+      i,
+      a,
+      span {
+        display: block;
+      }
+      i {
+        padding: 30px 0;
+        font-size: 32px;
+        color: $primary-color;
+      }
+      a {
+        color: $primary-color;
+        font-size: 18px;
+      }
+
+      span {
+        font-size: 18px;
+
+        &:not(:first-of-type) {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  &_form {
+    .inqury_form {
+      //   border: $border1;
+      box-shadow: $box-shadow-1;
+      padding: 50px;
+      margin-bottom: 50px;
+    }
+    input,
+    select,
+    textarea {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 5px 15px;
+      outline: none;
+      border: $border1;
+    }
+    // input[type="file"] {
+    //   display: none;
+    // }
+    input[type="submit"] {
+      background-color: $primary-color;
+      color: $white;
+      @include transition-ease;
+      font-weight: 600;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,295 @@
+.cart_wrapper {
+  overflow: hidden;
+  max-width: 100%;
+  width: 350px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(25vw);
+  background-color: $white;
+  @include transition-ease;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0vw);
+  }
+
+  .cart_box {
+    height: 60vh;
+    background-color: $white;
+    padding: 0 30px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: $secondary-color;
+
+      &-thumb {
+        width: 2px;
+        border-radius: 5px;
+        background-color: $primary-color;
+      }
+    }
+
+    .cart_title {
+      position: sticky;
+      top: 0;
+      background-color: $white;
+      z-index: 1;
+      padding: 15px 0;
+      border-bottom: $border1;
+    }
+    .cart_item {
+      position: relative;
+      padding: 30px 0;
+
+      &:not(:last-child) {
+        border-bottom: $border1;
+      }
+
+      &_details {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      &_remove {
+        button {
+          position: absolute;
+          top: 15px;
+          left: -5px;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $white;
+          //   font-size: 12px;
+          font-weight: 300;
+          color: red;
+          box-shadow: $box-shadow-1;
+          @include transition-ease;
+
+          &:hover {
+            color: $white;
+            background-color: red;
+          }
+        }
+      }
+
+      &_image {
+        width: 35%;
+        margin-right: 30px;
+      }
+      &_detail {
+        width: 65%;
+        text-align: left;
+
+        h5 {
+          font-weight: 600;
+          margin: 0;
+        }
+        .quantity {
+          &::after {
+            content: "Kg";
+            display: inline-block;
+            padding-left: 5px;
+          }
+        }
+        .rate {
+          &::before {
+            content: "NPR. ";
+            display: inline-block;
+            padding-right: 5px;
+          }
+          &::after {
+            content: "/kg";
+            display: inline-block;
+            // padding-left: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .cart_total {
+    padding: 15px 0;
+    border-top: $border1;
+    border-bottom: $border1;
+
+    span {
+      color: $primary-color;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+
+  .checkout {
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: $secondary-color;
+    color: $white;
+    font-weight: 600;
+    padding: 15px;
+    margin: 15px 0;
+    @include transition-ease;
+
+    &:hover {
+      background-color: $primary-color;
+      // color: $white;
+    }
+  }
+}
+.order_wrapper {
+  overflow: hidden;
+  max-width: 100%;
+  width: 350px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(25vw);
+  background-color: $white;
+  @include transition-ease;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0vw);
+  }
+
+  .order_box {
+    height: 60vh;
+    background-color: $white;
+    padding: 0 30px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: $secondary-color;
+
+      &-thumb {
+        width: 2px;
+        border-radius: 5px;
+        background-color: $primary-color;
+      }
+    }
+
+    .order_title {
+      position: sticky;
+      top: 0;
+      background-color: $white;
+      z-index: 1;
+      padding: 15px 0;
+      border-bottom: $border1;
+    }
+    .order_item {
+      position: relative;
+      padding: 30px 0;
+
+      &:not(:last-child) {
+        border-bottom: $border1;
+      }
+
+      &_details {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      &_remove {
+        button {
+          position: absolute;
+          top: 15px;
+          left: -5px;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $white;
+          //   font-size: 12px;
+          font-weight: 300;
+          color: red;
+          box-shadow: $box-shadow-1;
+          @include transition-ease;
+
+          &:hover {
+            color: $white;
+            background-color: red;
+          }
+        }
+      }
+
+      &_image {
+        width: 35%;
+        margin-right: 30px;
+      }
+      &_detail {
+        width: 65%;
+        text-align: left;
+
+        h5 {
+          font-weight: 600;
+          margin: 0;
+        }
+        .quantity {
+          &::after {
+            content: "Kg";
+            display: inline-block;
+            padding-left: 5px;
+          }
+        }
+        .rate {
+          &::before {
+            content: "NPR. ";
+            display: inline-block;
+            padding-right: 5px;
+          }
+          &::after {
+            content: "/kg";
+            display: inline-block;
+            // padding-left: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .order_total {
+    padding: 15px 0;
+    border-top: $border1;
+    border-bottom: $border1;
+
+    span {
+      color: $primary-color;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+
+  .checkout {
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: $secondary-color;
+    color: $white;
+    font-weight: 600;
+    padding: 15px;
+    margin: 15px 0;
+    @include transition-ease;
+
+    &:hover {
+      background-color: $primary-color;
+      // color: $white;
+    }
+  }
+}
+
